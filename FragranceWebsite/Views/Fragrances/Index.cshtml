@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Fragrance List";
+}
+
+<div class="p-4" style="border-radius:20px;">
+    <div class="row">
+        <div class="col-6">
+            <h2 class="text-primary">Fragrance List</h2>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-action="Upsert" class="btn btn-primary text-white"><i class="fa fa-plus"></i> &nbsp; Create Fragrance</a>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div style="background-color:#cde8e2" class="p-3 rounded">
+        <table id="tblData" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr class="table-danger">
+                    <th>Brand</th>
+                    <th>Name</th>
+                    <th>Release Year</th>
+                    <th>Perfumer</th>
+                    <th>Type</th>
+                    <th>Main Notes</th>
+                    <th>Price</th>
+                    <th></th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/fragrance.js"></script>
+}

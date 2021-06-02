@@ -1,0 +1,119 @@
+﻿@model FragranceWebsite.ViewModels.FragranceVM
+@{ 
+    if (Model.FragranceId != 0)
+    {
+        ViewData["Title"] = "Edit Fragrance";
+    }
+    else
+    {
+        ViewData["Title"] = "Create Fragrance";
+    }
+
+    var title = "Create Fragrance";
+}
+<form method="post" asp-action="Upsert" enctype="multipart/form-data">
+
+    <div class="row px-2 mx-2 backgroundWhite border">
+        @if(Model.FragranceId != 0)
+        {
+            <input type="hidden" asp-for="FragranceId" />
+             title = "Edit Fragrance";
+        }
+        <div class="col-12 p-3">
+            <h2 class="text-primary">@title</h2>
+        </div>
+        <div class="col-8">
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Brand"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Brand" class="form-control" />
+                    <span asp-validation-for="Brand" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Name"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="ReleaseYear">Release Year</label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="ReleaseYear" class="form-control" />
+                    <span asp-validation-for="ReleaseYear" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Perfumer"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Perfumer" class="form-control" />
+                    <span asp-validation-for="Perfumer" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Type"></label>
+                </div>
+                <div class="col-8">
+                    <select asp-for="Type" asp-items="Html.GetEnumSelectList<FragranceWebsite
+                                      .ViewModels.FragranceVM.FragranceOption>()" class="form-control"></select>
+                    <span asp-validation-for="Type" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="MainNotes">Main Notes</label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="MainNotes" class="form-control" />
+                    <span asp-validation-for="MainNotes" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Price"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Price" class="form-control" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Picture"></label>
+                </div>
+                <div class="col-8">
+                    <input type="file" asp-for="Picture" id="fragranceImage" name="files" multiple class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4 offset-4">
+                    <button type="submit" class="btn btn-primary form-control">
+                        @(Model.FragranceId !=0?"Edit":"Create")
+                    </button>
+                </div>
+                <div class="col-4">
+                    <a asp-action="Index" class="btn btn-success form-control">Back to List</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 text-right" style="width:250px;">
+            @if (Model.Picture != null)
+            {
+                var base64 = Convert.ToBase64String(Model.Picture);
+                var imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
+                <img src="@imgsrc" width="100%" />
+            }
+        </div>
+    </div>
+
+</form>

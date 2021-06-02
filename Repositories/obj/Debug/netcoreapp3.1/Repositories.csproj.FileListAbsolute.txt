@@ -1,0 +1,12 @@
+C:\Users\Bozhidar Atanasov\source\repos\DistributedApplicationsRESTfulProject\Repositories\bin\Debug\netcoreapp3.1\Repositories.deps.json
+C:\Users\Bozhidar Atanasov\source\repos\DistributedApplicationsRESTfulProject\Repositories\bin\Debug\netcoreapp3.1\Repositories.dll
+C:\Users\Bozhidar Atanasov\source\repos\DistributedApplicationsRESTfulProject\Repositories\bin\Debug\netcoreapp3.1\Repositories.pdb
+C:\Users\Bozhidar Atanasov\source\repos\DistributedApplicationsRESTfulProject\Repositories\bin\Debug\netcoreapp3.1\Data.dll
+C:\Users\Bozhidar Atanasov\source\repos\DistributedApplicationsRESTfulProject\Repositories\bin\Debug\netcoreapp3.1\Data.pdb
+C:\Users\Bozhidar Atanasov\source\repos\DistributedApplicationsRESTfulProject\Repositories\obj\Debug\netcoreapp3.1\Repositories.csprojAssemblyReference.cache
+C:\Users\Bozhidar Atanasov\source\repos\DistributedApplicationsRESTfulProject\Repositories\obj\Debug\netcoreapp3.1\Repositories.AssemblyInfoInputs.cache
+C:\Users\Bozhidar Atanasov\source\repos\DistributedApplicationsRESTfulProject\Repositories\obj\Debug\netcoreapp3.1\Repositories.AssemblyInfo.cs
+C:\Users\Bozhidar Atanasov\source\repos\DistributedApplicationsRESTfulProject\Repositories\obj\Debug\netcoreapp3.1\Repositories.csproj.CoreCompileInputs.cache
+C:\Users\Bozhidar Atanasov\source\repos\DistributedApplicationsRESTfulProject\Repositories\obj\Debug\netcoreapp3.1\Repositories.csproj.CopyComplete
+C:\Users\Bozhidar Atanasov\source\repos\DistributedApplicationsRESTfulProject\Repositories\obj\Debug\netcoreapp3.1\Repositories.dll
+C:\Users\Bozhidar Atanasov\source\repos\DistributedApplicationsRESTfulProject\Repositories\obj\Debug\netcoreapp3.1\Repositories.pdb

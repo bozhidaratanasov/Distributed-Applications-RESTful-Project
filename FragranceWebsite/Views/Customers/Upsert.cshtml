@@ -1,0 +1,86 @@
+﻿@model FragranceWebsite.ViewModels.CustomerVM
+@{
+    if (Model.CustomerId != 0)
+    {
+        ViewData["Title"] = "Edit Customer";
+    }
+    else
+    {
+        ViewData["Title"] = "Create Customer";
+    }
+
+    var title = "Create Customer";
+}
+<form method="post" asp-action="Upsert">
+
+    <div class="row px-2 mx-2 backgroundWhite border">
+        @if (Model.CustomerId != 0)
+        {
+            <input type="hidden" asp-for="CustomerId" />
+            title = "Edit Customer";
+        }
+        <div class="col-12 p-3">
+            <h2 class="text-primary">@title</h2>
+        </div>
+        <div class="col-8">
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="FirstName">First Name</label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="LastName">Last Name</label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Phone"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Phone" class="form-control" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="AddressType">Address Type</label>
+                </div>
+                <div class="col-8">
+                    <select asp-for="AddressType" asp-items="Html.GetEnumSelectList<FragranceWebsite
+                                      .ViewModels.CustomerVM.AddressOption>()" class="form-control"></select>
+                    <span asp-validation-for="AddressType" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Address"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4 offset-4">
+                    <button type="submit" class="btn btn-primary form-control">
+                        @(Model.CustomerId !=0?"Edit":"Create")
+                    </button>
+                </div>
+                <div class="col-4">
+                    <a asp-action="Index" class="btn btn-success form-control">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+
